@@ -4,7 +4,6 @@ document.getElementById('myInput').style.display='none';
 btn.addEventListener('click',function(){
 
 		var xhttp = new XMLHttpRequest();
-//xhttp.open('GET','https://learnwebcode.github.io/json-example/animals-1.json');
 		xhttp.open('GET','ajax.json');
 		xhttp.onload = function(){
 		var data = JSON.parse(xhttp.responseText);
