@@ -1,0 +1,8 @@
+th,td{
+	border: 2px solid;
+	width: 800px;
+	height:auto; 
+}
+table{
+	max-width:600px;
+}
