@@ -19,7 +19,7 @@ function renderHTML(data){
 	var htmlString = "";
 
 	for(i=0;i<data.length;i++){
-		htmlString += "<tr><td>" + data[i].name + "</td><td>" + data[i].branch + data.length+ "</td></tr>";
+		htmlString += "<tr><td>" + data[i].name + "</td><td>" + data[i].branch + "</td></tr>";
 	}
 	if(i==data.length)
 	{
