@@ -1,5 +1,6 @@
 var info = document.getElementById('info');
 var btn = document.getElementById('btn');
+document.getElementById('count').innerHTML=0;
 document.getElementById('myInput').style.display='none';
 btn.addEventListener('click',function(){
 
@@ -23,8 +24,7 @@ function renderHTML(data){
 	}
 	if(i==data.length)
 	{
-		htmlString += "<p>Total records : " + i + "</p>"
-		i++;
+		document.getElementById('count').innerHTML=i;
 		document.getElementById('btn').style.display='none';
 		document.getElementById('myInput').style.display='block';
 
@@ -38,18 +38,23 @@ function myFunction() {
   filter = input.value.toUpperCase();
   table = document.getElementById("info");
   tr = table.getElementsByTagName("tr");
-
+  var count=0;
   // Loop through all table rows, and hide those who don't match the search query
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[0];
         td1 = tr[i].getElementsByTagName("td")[1];
         if (td+td1) {
           if ((td.innerHTML.toUpperCase().indexOf(filter)+td1.innerHTML.toUpperCase().indexOf(filter)) > -2) {
-            tr[i].style.display = "";
+            tr[i].style.display = ""; 
+            count++;
+           	document.getElementById('count').innerHTML=count;
           } else {
             tr[i].style.display = "none";
-          }
+            document.getElementById('count').innerHTML=count;
+          }    
     }
   }
 }
+
+
 
